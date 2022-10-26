@@ -1,0 +1,45 @@
+
+/*=======================================
+   3차 1급 3_solution_code.java
+   ybmit.com 사이트의 샘플 파일에는 정답이 제시되어 있지 않습니다.
+   아래와 같은 정답을 제안 드립니다.
+   (더 좋은 알고리즘이 있다면 사용하시길 바랍니다.)
+ ========================================*/
+
+class Solution2 {
+    public int solution(String[] bishops) {
+        // 여기에 코드를 작성해주세요.
+       // int answer = 0;
+      //  int[][] chess_map = new int[8][8];
+        int x,y;
+        	
+	    for (int i =0; i<bishops.length ; i++) {
+	    	x = Integer.parseInt(bishops[i].substring(0,1));
+	        y = Integer.parseInt(bishops[i].substring(1))  ;
+	    	
+//	    	x = Integer.parseInt(bishops[0].substring(0,1)) - (int)('A');
+//	        y = Integer.parseInt(bishops[0].substring(1))  - 1;
+	        System.out.println(x);
+	        System.out.println(y);
+	    }
+
+        return 11;
+    }
+
+    // 아래는 테스트케이스 출력을 해보기 위한 main 메소드입니다.
+    public static void main(String[] args) {
+        Solution2 sol = new Solution2();
+        String[] bishops1 = {"D5"};
+        int ret1 = sol.solution(bishops1);
+        
+        // [실행] 버튼을 누르면 출력 값을 볼 수 있습니다.
+       System.out.println("solution 메소드의 반환 값은 " + ret1 + " 입니다.");
+
+        //String[] bishops2 = {"D5","E8","G2"};
+       // int ret2 = sol.solution(bishops2);
+        
+        // [실행] 버튼을 누르면 출력 값을 볼 수 있습니다.
+     //   System.out.println("solution 메소드의 반환 값은 " + ret2 + " 입니다.");
+    }
+}
+
