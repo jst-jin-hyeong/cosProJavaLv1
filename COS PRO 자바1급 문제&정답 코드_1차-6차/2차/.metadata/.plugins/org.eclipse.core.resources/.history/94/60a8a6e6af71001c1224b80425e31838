@@ -1,0 +1,55 @@
+import java.time.Duration;
+import java.time.LocalTime;
+import java.util.Arrays;
+
+class T_Solution_Sum_TwoPointer2 {
+
+
+        // 아래는 테스트케이스 출력을 해보기 위한 main 메소드입니다.
+    public static void main(String[] args) {
+        int[] arr2 = {1, 5, 3, 8, 2, 4, 9, 6};
+        int[] arr =  {1, 5, 3, 8, 2, 4, 9, 6};
+        int K = 11;
+        int ret=0;
+        int answer = 0;
+        int sum=0,p=0;
+        int n=arr.length;
+        int left,right;
+        
+        LocalTime startTime2 = LocalTime.now();
+
+        
+        for (int i=0;i<=100000000;i++) {
+        	arr=arr2;
+            Arrays.sort(arr); 
+            
+            for (p=0; p<n-2;p++) {
+            	left=p+1;
+            	right=n-1;
+            	while (left<right) {
+            		sum = arr[p]+arr[left]+arr[right];
+            	    if (sum < K) 
+            	    	left+=1;
+            	    else if (sum > K) 
+            	    	right-=1;
+            	    else {
+            	    	answer+=1;
+            	    	//System.out.println(arr[p] + " " +arr[left]+" "+ arr[right]);
+            	    	left+=1;
+            	    	right-=1;
+            	    }	        		        		
+            	}
+            }     
+        }
+        
+        System.out.println("solution 메소드의 반환 값은 " + answer + " 입니다.");
+        
+        LocalTime endTime2=LocalTime.now();
+        
+        Duration d2 = Duration.between(startTime2, endTime2);
+        System.out.println(d2.getSeconds()+"."+d2.getNano());
+
+
+        
+    }
+}

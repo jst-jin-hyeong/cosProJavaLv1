@@ -1,0 +1,41 @@
+import java.time.Duration;
+import java.time.LocalTime;
+
+class T_Solution_Sum_Brute {
+
+
+        // 아래는 테스트케이스 출력을 해보기 위한 main 메소드입니다.
+    public static void main(String[] args) {
+        int[] arr = {1, 5, 3, 8, 2, 4, 9, 6};
+        int K = 11;
+        int ret=0;
+        int answer = 0;
+        int n=arr.length;
+        LocalTime startTime = LocalTime.now();
+        
+        for (int i=0;i<=100000000;i++) {
+
+            
+            for (int p=0; p<n-2;p++) {
+            	for (int q=p+1; q<n-1 ; q++) {
+            		for (int r=q+1;r<n ; r++ ) {
+            			if((arr[p]+arr[q]+arr[r]) ==K) {
+            				answer+=1;
+            				//System.out.println(arr[p] + " " +arr[q]+" "+ arr[r]);
+            			}
+            		}
+            	}
+            }     
+        }
+        
+        System.out.println("solution 메소드의 반환 값은 " +answer + " 입니다.");
+        
+        LocalTime endTime=LocalTime.now();
+        
+        Duration d = Duration.between(startTime, endTime);
+        System.out.println(d.getSeconds()+"."+d.getNano());
+
+
+        
+    }
+}

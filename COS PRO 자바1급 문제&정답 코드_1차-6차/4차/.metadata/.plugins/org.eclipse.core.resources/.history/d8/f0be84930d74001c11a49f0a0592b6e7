@@ -1,0 +1,17 @@
+
+/*=======================================
+   4차 1급 9_solution_code.java
+   ybmit.com 사이트에는 정답이 없습니다.
+   아래 답안을 제안합니다.
+ ========================================*/
+
+
+    public String solution(int hour, int minute) {
+        // 여기에 코드를 작성해주세요.
+        String answer = "";
+
+        return answer;
+    }
+
+
+    

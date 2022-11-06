@@ -1,0 +1,17 @@
+
+public class test {
+	public static void main(String[] args) {
+	       // Solution2 sol = new Solution2();
+		    String[] bishops1 = {new String("D5")};
+	        int x, y;
+	        
+	        System.out.println(bishops1[0]);
+	        
+//	    	x = Integer.parseInt(bishops1[0].substring(0,1));
+//	        y = Integer.parseInt(bishops1[0].substring(1))  ;
+//	    	
+//	        
+//	        System.out.println(x);
+//	        System.out.println(y);
+	}
+}
